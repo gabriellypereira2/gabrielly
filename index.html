@@ -1,68 +1,50 @@
-<!doctype html>
-<html lang="pt-BR" ng-app="blog">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <title>Blog da Gaby</title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon.ico">
-    <link href="https://getbootstrap.com/docs/4.6/examples/album/album.css" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <strong> Blog da Gaby</strong>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Natália Taíse Pithan Korsack Rosa">
+    <meta name="description" content="Piadas do Chuck Norris. Fundo de cor sólida com uma caixa de texto e um botão que gera as piadas. História de como surgiu as piadas do chuck norris. Imagem do Chuck Norris."/>
+    <meta name="keywords" content="Chuck Norris, Piadas, API"/>
+    <meta name="generator" content="Replit"/>
+    <meta name="rating" content="general"/>
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+ 
+
+
+  <h1>GERADOR DE PIADAS CHUCK NORRIS</h1>
     
-    <main role="main">
-    
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1>API Blog</h1>
-          <p class="lead text-muted"></p>
-        </div>
-      </section>
-    
-      <div class="album py-5 bg-light">
-        <div class="container">
-         <div class="row" ng-controller="Rest">
-            <div class="col-md-4" ng-repeat="publicacao in publicacoes">
-              <div class="card mb-4 shadow-sm">
-                <img ng-src={{ publicacao.thumbImage }}" >
-                <div class="card-body">
-                  <p class="card-text">{{ publicacao.title }}</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-muted">{{ publicacao.description }}</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-    </main>
-    <footer class="text-muted">
-      <div class="container">
-      </div>
-    </footer>  
-        <script src="script.js" ></script>
-      </body>
-    </html>
+    <div class="text-container">
+    </div>
+    <div class="button-container">
+      <button onclick="getChuckNorrisJoke()">Gerar piada</button>
+    </div>
+    <p id="joke"></p>
+  <section class="section-container" id="section" style="background-color: ;">
+  </section>
+
+  <footer id="footer">
+    <div class="footer-section">
+    </div>
+    <div class="footer-section">
+      <h3>Contatos: </h3>
+      <p>Email: chucknorris@hotmail.com</p>
+      <p>Celular: (99) 9 9999-9999 </p>
+    </div>
+    <div class="footer-section">
+      <h3>Acompanhe nossas redes sociais</h3>
+      <ul id="links">
+        <li><a href="https://www.facebook.com">Facebook</a></li>
+        <li><a href="https://twitter.com">Twitter</a></li>
+        <li><a href="https://www.instagram.com">Instagram</a></li>
+      </ul>
+    </div></footer>
+</body>
+
+</html>
